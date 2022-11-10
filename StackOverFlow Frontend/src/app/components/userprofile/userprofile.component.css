@@ -1,0 +1,52 @@
+img {
+  height: 200px;
+  width: 95%;
+  margin: 10px;
+}
+.container {
+  margin-top: 20px;
+}
+.card {
+  background-color: #474e68;
+  color: white;
+  min-height: 200px;
+  max-height: 500px;
+  margin: 40px;
+}
+.bd {
+  background-color: #eeeeee;
+}
+.container {
+  background-color: #bccef8;
+}
+.qns {
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+  border: rgb(82, 79, 79);
+  padding: 10px;
+  margin-left: 0px;
+}
+h4 {
+  color: rgb(51, 86, 201);
+}
+.btn1 {
+  border: none;
+}
+.btn2 {
+  border: none;
+  background-color: #3a8891;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 8px;
+}
+h3 {
+  color: white;
+}
+a{
+  text-decoration: none;
+  font-size: medium;
+  float: right;
+  margin-top: 20px;
+  margin-right: 80px;
+}

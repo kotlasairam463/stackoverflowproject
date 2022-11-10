@@ -1,0 +1,104 @@
+<div class="main">
+    <div class="container col-lg-4 col-md-3 col-xs-3">
+      <form [formGroup]="addcompanyform" (ngSubmit)="onSubmit()">
+        <h3><b>Add a Company</b></h3>
+        <div>
+            <label for="img" class="inp">Company img url:</label>
+            <input
+              type="text"
+              placeholder="company image url"
+              formControlName="img"
+              class="inp"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                addcompanyform.controls['img'].dirty &&
+                addcompanyform.hasError('required', 'img')
+              "
+              >companyimage is required</span
+            >
+          <label for="name" class="inp">Company Name:</label>
+          <input
+            type="text"
+            placeholder="companyname"
+            formControlName="name"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              addcompanyform.controls['name'].dirty &&
+              addcompanyform.hasError('required', 'name')
+            "
+            >companyname is required</span
+          >
+          <label for="position" class="inp">Position:</label>
+          <input
+            type="text"
+            placeholder="position"
+            formControlName="position"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              addcompanyform.controls['position'].dirty &&
+              addcompanyform.hasError('required', 'email')
+            "
+            >position is required</span
+          >
+          <label for="location" class="inp">Location:</label>
+          <input
+            type="text"
+            placeholder="location"
+            formControlName="location"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              addcompanyform.controls['location'].dirty &&
+              addcompanyform.hasError('required', 'location')
+            "
+            >Location is required</span
+          >
+          <label for="skills" class="inp">Skills:</label>
+          <input
+            type="text"
+            placeholder="skills space seperated"
+            formControlName="skills"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              addcompanyform.controls['skills'].dirty &&
+              addcompanyform.hasError('required', 'skills')
+            "
+            >skills is required</span
+          >
+          <label for="vacancies" class="inp">Vacancies:</label>
+          <input
+            type="number"
+            placeholder="vacancies"
+            formControlName="vacancies"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              addcompanyform.controls['vacancies'].dirty &&
+              addcompanyform.hasError('required', 'vacancies')
+            "
+            >Vacancies is required</span
+          >
+          <br />
+          <button class="btn btn-primary p-2" [disabled]="!addcompanyform.valid">
+            ADD COMPANY
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

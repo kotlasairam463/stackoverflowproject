@@ -1,0 +1,27 @@
+
+<a [routerLink]="'/main'" [routerLinkActive]="'active'">&larr;Back</a><br>
+
+<div class="container1">
+  <br />
+  <div class="text-center">
+    <button class="btn btn-secondary" (click)="askqn()">
+      Ask a new question
+    </button>
+  </div>
+  <br />
+
+  <div class="qns">
+    <div *ngFor="let q of questionsList">
+      <button (click)="specificqn(q.id)" class="btn1">
+        <h4>{{ q.question }}</h4>
+      </button>
+      <h6>{{ q.description }}</h6>
+      <div class="tags">
+        <span *ngFor="let t of q.tags"
+          ><button type="button" class="btn2">{{ t }}</button></span
+        >
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

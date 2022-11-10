@@ -1,0 +1,58 @@
+<div class="main">
+  <div class="container col-lg-4 col-md-3 col-xs-3">
+    <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+      <h3><b>SignUp Form</b></h3>
+      <div>
+        <label for="fullname" class="inp">Full Name:</label>
+        <input
+          type="text"
+          placeholder="fullname"
+          formControlName="fullname"
+          class="inp"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            registerform.controls['fullname'].dirty &&
+            registerform.hasError('required', 'fullname')
+          "
+          >Fullname is required</span
+        >
+        <label for="email" class="inp">Email:</label>
+        <input
+          type="text"
+          placeholder="email"
+          formControlName="email"
+          class="inp"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            registerform.controls['email'].dirty &&
+            registerform.hasError('required', 'email')
+          "
+          >Email is required</span
+        >
+        <label for="password" class="inp">Password:</label>
+        <input
+          type="password"
+          placeholder="password"
+          formControlName="password"
+          class="inp"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            registerform.controls['password'].dirty &&
+            registerform.hasError('required', 'password')
+          "
+          >Password is required</span
+        >
+        <br />
+        <button class="btn btn-primary p-2" [disabled]="!registerform.valid">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

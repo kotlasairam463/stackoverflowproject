@@ -1,0 +1,35 @@
+<span *ngIf="check">
+<div class="navbar">
+  <h3><i class="fa fa-stack-overflow" aria-hidden="true"></i>Stackoverflow</h3>
+  <button class="wrapper" (click)="addCompany()">Add a Company</button>
+</div>
+</span>
+<a [routerLink]="'/main'" [routerLinkActive]="'active'">&larr;Back</a><br>
+<div class="container">
+  <div class="row  row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-4 mb-4 p-5 ">
+    <div class="col" *ngFor="let company of companylist">
+      <div class="card shadow p-3 mb-5 bg-body rounded" id="card1">
+        <img src="{{ company.img }}" class="card-img-top img-fluid" alt="..." />
+        <div class="card-body">
+          <h2 class="card-title">
+            <b>{{ company.name }}</b>
+          </h2>
+          <h4 class="card-description">{{ company.position }}</h4>
+          <h5>{{ company.location }}</h5>
+          <h6>Vacancies:{{ company.vacancies }}</h6>
+          <div class="skill1">
+            <p class="skill1" *ngFor="let skill of company.skills">
+              <button type="button" class="btn btn-light mr-2">
+                {{ skill }}&nbsp;
+              </button>
+            </p>
+          </div>
+          <br />
+          <button class="btn1" (click)="applyFun(company.id)">Apply</button>
+          <span *ngIf="check"><button class="delbtn" (click)="delFun(company.id)">Delete</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

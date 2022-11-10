@@ -1,0 +1,40 @@
+
+<a [routerLink]="'/main'" [routerLinkActive]="'active'">&larr;Back</a><br>
+<div class="container">
+
+  <h3><b>Post Your Solution</b></h3>
+  <br />
+  <h4>{{ question.id }}.{{ question.question }}</h4>
+  <form [formGroup]="solutionform" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="qid" class="inp">QuestionId:</label>
+      <textarea
+        type="text"
+        placeholder="qid"
+        formControlName="qid"
+        class="inp"
+        rows="1"
+        cols="100"
+      ></textarea>
+      <label for="code" class="inp">Code:</label>
+      <textarea
+        type="text"
+        placeholder="code"
+        formControlName="code"
+        class="inp"
+        rows="10"
+        cols="100"
+      ></textarea>
+      <span
+        class="text-danger"
+        *ngIf="
+          solutionform.controls['code'].dirty &&
+          solutionform.hasError('required', 'code')
+        "
+        >code is required</span
+      >
+      <br />
+      <button class="btn btn-primary">Post</button>
+    </div>
+  </form>
+</div>

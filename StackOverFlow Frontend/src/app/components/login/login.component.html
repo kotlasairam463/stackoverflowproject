@@ -1,0 +1,45 @@
+<div class="main">
+  <div class="container col-lg-4 col-md-3 col-sm-2 col-xs-2">
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+      <h3><b>Login Form</b></h3>
+      <div>
+        <label for="email" class="inp">Email:</label>
+        <input
+          type="text"
+          placeholder="email"
+          formControlName="email"
+          class="inp"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            loginform.controls['email'].dirty &&
+            loginform.hasError('required', 'email')
+          "
+          >Email is required</span
+        >
+        <label for="password" class="inp">Password:</label>
+        <input
+          type="password"
+          placeholder="password"
+          formControlName="password"
+          class="inp"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            loginform.controls['password'].dirty &&
+            loginform.hasError('required', 'password')
+          "
+          >Password is required</span
+        >
+        <a [routerLink]="'/passwordreset'" [routerLinkActive]="'active'"
+          ><span style="color: crimson">forgot password?</span></a
+        ><br />
+        <button class="btn btn-primary p-2" [disabled]="!loginform.valid">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

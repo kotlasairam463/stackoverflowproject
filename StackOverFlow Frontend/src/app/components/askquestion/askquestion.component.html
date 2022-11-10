@@ -1,0 +1,96 @@
+<a [routerLink]="'/main'" [routerLinkActive]="'active'">&larr;Back</a><br>
+<div class="container">
+  <form [formGroup]="doubtform" (ngSubmit)="onSubmit()">
+    <h3><b>Post Your Doubt</b></h3>
+    <div>
+      <label for="question" class="inp">Question:</label>
+      <textarea
+        type="text"
+        placeholder="question"
+        formControlName="question"
+        class="inp"
+        rows="2"
+        cols="100"
+      ></textarea>
+      <span
+        class="text-danger"
+        *ngIf="
+          doubtform.controls['question'].dirty &&
+          doubtform.hasError('required', 'question')
+        "
+        >Question is required</span
+      >
+      <label for="description" class="inp">Description:</label>
+      <textarea
+        type="text"
+        placeholder="describe your  question"
+        formControlName="description"
+        class="inp"
+        rows="3"
+        cols="100"
+      ></textarea>
+      <span
+        class="text-danger"
+        *ngIf="
+          doubtform.controls['question'].dirty &&
+          doubtform.hasError('required', 'question')
+        "
+        >Description is required</span
+      >
+      <label for="code" class="inp">Code:</label>
+      <textarea
+        type="text"
+        placeholder="code"
+        formControlName="code"
+        class="inp"
+        rows="10"
+        cols="100"
+      ></textarea>
+      <span
+        class="text-danger"
+        *ngIf="
+          doubtform.controls['code'].dirty &&
+          doubtform.hasError('required', 'code')
+        "
+        >code is required</span
+      >
+      <label for="tag" class="inp">Tags:</label>
+      <textarea
+        type="text"
+        placeholder="tags space seperated"
+        formControlName="tags"
+        class="inp"
+        rows="1"
+        cols="100"
+      ></textarea>
+      <span
+        class="text-danger"
+        *ngIf="
+          doubtform.controls['tags'].dirty &&
+          doubtform.hasError('required', 'tag')
+        "
+        >Tag is required</span
+      >
+      <label for="email" class="inp">Email:</label>
+      <textarea
+        type="text"
+        placeholder="email"
+        formControlName="email"
+        class="inp"
+        rows="1"
+        cols="100"
+      ></textarea>
+      <span
+        class="text-danger"
+        *ngIf="
+          doubtform.controls['email'].dirty &&
+          doubtform.hasError('required', 'email')
+        "
+        >Email is required</span
+      >
+
+      <br />
+      <button class="btn btn-primary">Post</button>
+    </div>
+  </form>
+</div>

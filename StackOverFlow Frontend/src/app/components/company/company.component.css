@@ -1,0 +1,75 @@
+img {
+  height: 150px;
+  width: 80%;
+  margin: 10px 25px;
+  border-radius: 5px;
+}
+.container {
+  margin-top: 20px;
+  background-color: #5f6f94;
+}
+.card {
+  overflow: auto;
+}
+.skill1 {
+  display: inline;
+}
+h4 {
+  color: #e0144c;
+}
+#card1 {
+  height: auto;
+  min-width: 300px;
+  /* height: 450px; */
+}
+h2 {
+  color: #083aa9;
+}
+h6 {
+  color: #a084ca;
+}
+.btn1 {
+  background-color: #256d85;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 8px;
+}
+a{
+  text-decoration: none;
+  font-size: medium;
+  float: right;
+  margin-top: 10px;
+  margin-right: 0px;
+}
+.navbar{
+  height: 50px;
+  background-color: #EAEAEA;
+  width: 100%;
+
+}
+.wrapper{
+  display: block;
+  border: none;
+  background-color: #3a8891;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.delbtn{
+  background-color: #852525;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 8px;
+  float: right;
+}
+h3{
+  color: #FB2576;
+  padding: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+  <br>
+  <a [routerLink]="'/main'" [routerLinkActive]="'active'">&larr;Back</a><br>
+  <div class="first">
+    <h3>Q:{{ question.question }}</h3>
+    <span>Description:</span>
+    <p>{{ question.description }}</p>
+    <!-- <button type="button" class="btn2" (click)="incrementview(question.id)">incview</button>&nbsp; -->
+    <button type="button" class="btn2" >views:{{question.views}}</button>
+
+    <br />
+  </div>
+  <hr />
+  <div class="second">
+    <h4>Problematic code:</h4>
+    <h6>{{ question.code }}</h6>
+  </div>
+  <hr />
+  <div *ngFor="let ans of filtersol">
+    <div class="row">
+      <div class="col col-sm-4 col-md-6 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h4>Solution code:</h4>
+            <h6>{{ ans.code }}</h6>
+            <div class="btns">
+              <button type="button" class="btn1">
+               votes:{{ans.votes}}</button>
+              <button type="button" class="btn1" (click)="incrementVotes(ans.id)">
+                Add vote</button
+              >&nbsp;
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn3" (click)="yoursolution(question.id)">
+    Want to Submit Solution
+  </button>
+</div>

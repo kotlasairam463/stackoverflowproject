@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+.navbar {
+  padding: 6px;
+  margin: 2px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 3px;
+  color: rgb(184, 35, 85);
+  background-color: #0f3460;
+}
+h1 {
+  display: block;
+  margin-left: 50px;
+  margin-top: 15px;
+  font-size: 2em;
+}
+nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(209, 66, 15);
+  font-size: 1.2em;
+  padding: 5px 20px;
+  display: block;
+  margin: auto;
+  justify-content: space-between;
+}
+
+nav a:hover {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  border-radius: 10px;
+}
+.logo {
+  width: 250px;
+  height: 80px;
+  float: left;
+}
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 5px;
+  border: 1px solid rgb(139, 133, 133);
+  background-color: aliceblue;
+}
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* general styling */
+
+:root {
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: var(--Very-Dark-Blue);
+  background-color: var(--Very-Light-Gray);
+}
+
+section {
+  max-width: 25rem;
+  margin-top: 0px;
+}
+
+.feature {
+  position: relative;
+  max-width: 21rem;
+  height: 15rem;
+  margin: 2rem auto;
+  padding: 2em;
+  border-radius: 0.75em;
+  box-shadow: 5px 5px 20px rgba(0 0 0/0.15);
+  text-align: left;
+  transition: transform 200ms ease-in;
+}
+
+.feature:hover {
+  transform: scale(1.03);
+}
+
+.feature__desc {
+  margin-top: 0.5em;
+  color: var(--Grayish-Blue);
+}
+
+.feature__img {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* separate styling */
+
+.section__title {
+  margin: 0 auto;
+  max-width: 90%;
+  font-size: 1.65rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.section__title span {
+  font-weight: 700;
+}
+
+.section__desc {
+  max-width: 32ch;
+  margin: 1rem auto 3rem;
+  color: var(--Grayish-Blue);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.feature-one {
+  border-top: 5px solid var(--Cyan);
+}
+
+.feature-two {
+  border-top: 5px solid var(--Red);
+}
+.feature-four {
+  border-top: 5px solid var(--Blue);
+}
+
+/* attribution styling */
+
+.attribution {
+  color: var(--Very-Dark-Blue);
+  opacity: 0.7;
+}
+
+.attribution a {
+  color: var(--Blue);
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: var(--Cyan);
+}
+
+/* media queries */
+
+@media (min-width: 1000px) {
+  body {
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  section {
+    max-width: 200rem;
+  }
+
+  .section__title {
+    margin: 0 auto;
+    max-width: 40%;
+    font-size: 2rem;
+  }
+
+  .section__desc {
+    max-width: 55ch;
+    margin: 1rem auto 1rem;
+  }
+
+  .features {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .feature-one {
+    margin: auto 0;
+  }
+  .feature-two {
+    margin: auto 0;
+  }
+
+  .feature-four {
+    margin: auto 0;
+  }
+}

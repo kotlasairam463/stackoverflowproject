@@ -1,0 +1,39 @@
+<div class="main">
+  <a [routerLink]="'/main'" [routerLinkActive]="'active'">&larr;Back</a><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-12 col-md-12 col-lg-4">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2VjAqQQ1UBtuGMrRIXzLc0b_TJAOuD7nmRg&usqp=CAU"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h3 class="card-title">{{ activeUsers[0].fullname }}</h3>
+            <h5>Software Engineer</h5>
+            <p><i style="font-size:15px" class="fa">&#xf0e0;</i>
+              {{activeUsers[0].email}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="bd col col-sm-12 col-md-12 col-lg-8">
+        <div class="qns">
+          <div *ngFor="let q of data">
+            <button (click)="specificqn(q.id)" class="btn1">
+              <h4>{{ q.question }}</h4>
+            </button>
+            <h6>{{ q.description }}</h6>
+            <div class="tags">
+              <span *ngFor="let t of q.tags"
+                ><button type="button" class="btn2">{{ t }}</button></span
+              >
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

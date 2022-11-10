@@ -1,0 +1,44 @@
+<div class="navbar">
+  <h1><i class="fa fa-stack-overflow" aria-hidden="true"></i>Stackoverflow</h1>
+  <div>
+    <input
+      type="text"
+      placeholder="Search by tag or Question"
+      [(ngModel)]="searchItem"
+      (keyup)="filterData($event)"
+    />
+  </div>
+  <nav>
+    <a [routerLink]="'/userprofile'" [routerLinkActive]="'active'"
+      ><i class="fa fa-user-circle" aria-hidden="true"></i>UserProfile</a
+    >
+    <a [routerLink]="'/questions'" [routerLinkActive]="'active'"
+      ><i class="fa fa-question-circle-o" aria-hidden="true"></i>Questions</a
+    >
+    <a [routerLink]="'/companies'" [routerLinkActive]="'active'"
+      ><i class="fa fa-building" aria-hidden="true"></i>Companies</a
+    >
+    <a  [routerLink]="'/home'" [routerLinkActive]="'active'" (click)="logout()"
+      ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a
+    >
+  </nav>
+</div>
+<div class="class1">
+  <h3>All Questions</h3>
+</div>
+<div class="qns">
+  <div *ngFor="let q of filteredData">
+    <button (click)="specificqn(q.id)" class="btn1">
+      <h4>{{ q.question }}</h4>
+    </button>
+    <h6>{{ q.description }}</h6>
+    <div class="tags">
+      <span *ngFor="let t of q.tags"
+        ><button type="button" class="btn2">{{ t }}</button></span
+      >
+    </div>
+    <hr />
+  </div>
+</div>
+
+<router-outlet></router-outlet>

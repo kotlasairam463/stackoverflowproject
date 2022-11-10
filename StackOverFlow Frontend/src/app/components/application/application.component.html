@@ -1,0 +1,104 @@
+<div class="main">
+    <div class="container col-lg-4 col-md-3 col-xs-3">
+      <form [formGroup]="applicationform" (ngSubmit)="onSubmit()">
+        <h3><b>Application Form</b></h3>
+        <div>
+            <label for="name" class="inp">FullName:</label>
+            <input
+              type="text"
+              placeholder="Name"
+              formControlName="name"
+              class="inp"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                applicationform.controls['name'].dirty &&
+                applicationform.hasError('required', 'name')
+              "
+              >Fullname is required</span
+            >
+          <label for="email" class="inp">Email:</label>
+          <input
+            type="text"
+            placeholder="Email"
+            formControlName="email"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              applicationform.controls['email'].dirty &&
+              applicationform.hasError('required', 'email')
+            "
+            >Email is required</span
+          >
+          <label for="company" class="inp">Company:</label>
+          <input
+            type="text"
+            placeholder="company name"
+            formControlName="company"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              applicationform.controls['company'].dirty &&
+              applicationform.hasError('required', 'company')
+            "
+            >Company is required</span
+          >
+          <label for="linkedin" class="inp">linkedinUrl:</label>
+          <input
+            type="text"
+            placeholder="linkedinUrl"
+            formControlName="linkedin"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              applicationform.controls['linkedin'].dirty &&
+              applicationform.hasError('required', 'linkedin')
+            "
+            >Linkedin profile is required</span
+          >
+          <label for="skills" class="inp">Skills:</label>
+          <input
+            type="text"
+            placeholder="skills space seperated"
+            formControlName="skills"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              applicationform.controls['skills'].dirty &&
+              applicationform.hasError('required', 'skills')
+            "
+            >skills is required</span
+          >
+          <label for="year" class="inp">Year of Graduation:</label>
+          <input
+            type="number"
+            placeholder="Graduation year"
+            formControlName="year"
+            class="inp"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              applicationform.controls['year'].dirty &&
+              applicationform.hasError('required', 'year')
+            "
+            > Graduation Year is required</span
+          >
+          <br />
+          <button class="btn btn-primary p-2" [disabled]="!applicationform.valid">
+            APPLY
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,79 @@
+<div class="navbar col col-xs-6">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqc-4Sv_Fq7xo0OZUIYCegQTTRtAi3xqw6pA&usqp=CAU"
+    alt="logo"
+    class="logo"
+  />
+  <!-- <h3>Stackoverflow</h3> -->
+  <input type="text" placeholder="&nbsp;Welcome..." [disabled]="true" />
+
+  <nav>
+    <a [routerLink]="'/login'" [routerLinkActive]="'active'">Login</a>
+    <a [routerLink]="'/register'" [routerLinkActive]="'active'">SignUp</a>
+  </nav>
+</div>
+<div>
+  <main style="display: block; margin: auto" class="container">
+    <section class="">
+      <h1 class="section__title">
+        Every Developer has a tab to open
+        <span style="color: #ff731d">Stack Overflow</span>
+      </h1>
+      <p class="section__desc">
+        Our website powered tools use millions of project data points to ensure
+        that your project is successful
+      </p>
+      <div class="features">
+        <div
+          class="feature feature-one"
+          style="background-color: #8d9eff; color: aliceblue"
+        >
+          <h3 class="feature__title">Search</h3>
+          <p class="feature__desc">
+            A public platform building the definitive collection of coding
+            questions & answers
+          </p>
+          <img
+            class="feature__img"
+            src="https://kellychi22.github.io/frontend-mentor-solutions/10-four-card-feature-section/images/icon-supervisor.svg"
+            alt=""
+          />
+        </div>
+        <div class="wrapper">
+          <div
+            class="feature feature-two"
+            style="background-color: #50577a; color: azure"
+          >
+            <h2 class="feature__title">Team Builder</h2>
+            <p class="feature__desc">
+              A community-based space to find and contribute answers to
+              technical challenges, and one of the most popular websites in the
+              world.
+            </p>
+            <img
+              class="feature__img"
+              src="https://kellychi22.github.io/frontend-mentor-solutions/10-four-card-feature-section/images/icon-team-builder.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          class="feature feature-four"
+          style="background-color: #ff7d7d; color: aliceblue"
+        >
+          <h2 class="feature__title">Help</h2>
+          <p class="feature__desc">
+            Engineers should help solve the hardest questions, the unknowns,
+            where being familiar with how the product was built is essential.
+          </p>
+          <img
+            class="feature__img"
+            src="https://kellychi22.github.io/frontend-mentor-solutions/10-four-card-feature-section/images/icon-calculator.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<router-outlet></router-outlet>

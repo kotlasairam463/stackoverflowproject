@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #f5efe6;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 5px;
+}
+.container h3 {
+  color: #fb2576;
+  font-size: 1.5em;
+}
+.inp {
+  padding: 8px;
+  margin: 3px 10px;
+  display: flex;
+  align-items: center;
+}
+textarea {
+  width: 90%;
+  border-radius: 10px;
+}
+a{
+  text-decoration: none;
+  font-size: medium;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
